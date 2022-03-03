@@ -37,5 +37,25 @@ public class FunWith2DArrays
         return average;
     }
 
+    public static int[] indexFound (String[][] strArray, String str)
+    {
+        int[] foundIdx = new int[2];
+        for(int row = 0; row<strArray.length; row++)
+        {
+            for(int col = 0; col<strArray[0].length; col++)
+            {
+               String element = (strArray[row][col]);
+               if(element.equals(str))
+               {
+                   foundIdx[0] = row;
+                   foundIdx[1] = col;
+                   return foundIdx;
+               }
+            }
+        }
+        foundIdx[0] = -1;
+        foundIdx[1] = -1;
+        return foundIdx;
+    }
 
 }
