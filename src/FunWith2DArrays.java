@@ -21,5 +21,21 @@ public class FunWith2DArrays
 
     }
 
+    public static double average(int[][] numArray)
+    {
+        double average = 0.0;
+        double sum = 0.0;
+        for(int[] list: numArray)
+        {
+            for(int elements : list)
+            {
+                sum+=elements;
+            }
+        }
+        int totalElements = numArray.length*numArray[0].length;
+        average = sum/totalElements;
+        return average;
+    }
+
 
 }
